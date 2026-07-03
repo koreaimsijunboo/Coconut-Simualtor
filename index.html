@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Coconut Simulator</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>html,body{height:100%}</style>
+</head>
+<body>
+    <div id="startScreen" class="screen">
+        <h1>Coconut Simulator</h1>
+        <button id="playBtn" class="btn">Play</button>
+    </div>
+
+    <div id="modeScreen" class="screen hidden">
+        <h2>Choose Mode</h2>
+        <div class="btnRow">
+            <button id="arcadeBtn" class="btn">Arcade</button>
+            <button id="realisticBtn" class="btn">Realistic</button>
+        </div>
+    </div>
+
+    <div id="gameScreen" class="hidden">
+        <div id="hud">
+            <div id="score">Score: 0</div>
+            <button id="backBtn" class="btn small">Back</button>
+        </div>
+        <div id="canvasContainer"></div>
+        <audio id="waveSound" src="assets/sound.mp3" loop preload="auto"></audio>
+
+        <div id="realisticOverlay" class="overlay hidden">
+            <div class="overlayContent">
+                <p>coconut doesn't have eyes or ears so you can't see or hear</p>
+                <button id="realisticOk" class="btn">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.152.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
